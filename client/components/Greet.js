@@ -1,14 +1,13 @@
 import React from 'react';
 import NavigationBar from './NavigationBar';
-class App extends React.Component {
+class Greet extends React.Component {
   render() {
     return (
       <div className="container">
-      <NavigationBar />
-      {this.props.children}
+      <div className="bg"></div>
       </div>
     );
   }
 }
 
-export default App;
+export default Greet;
