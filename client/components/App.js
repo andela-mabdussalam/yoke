@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import NavigationBar from './NavigationBar';
 
 class App extends React.Component {
@@ -11,5 +12,9 @@ class App extends React.Component {
     );
   }
 }
+
+App.propTypes = {
+  children: PropTypes.object.isRequired
+};
 
 export default App;
