@@ -1,5 +1,5 @@
 .navbar-custom {
-    background-color:#773c6d;
+    background-color:#229922;
     color:#ffffff;
     border-radius:0;
 }
@@ -19,7 +19,7 @@
 .navbar-custom .navbar-nav > .active > a:focus,
 .navbar-custom .navbar-nav > .open >a {
     text-decoration: none;
-    background-color: #560c49;
+    background-color: #33aa33;
 }
 
 .navbar-custom .navbar-brand {
@@ -30,9 +30,4 @@
 }
 .navbar-custom .icon-bar {
     background-color:#33aa33;
-}
-.bg{
-  background-image: url('../images/bg.jpg');
-  width: 700px;
-  height: 300px;
 }
