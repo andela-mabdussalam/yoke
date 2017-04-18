@@ -4,18 +4,27 @@ class SignupForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: ''
+      username: '',
+      email: '',
+      password: '',
+      passwordConfirmation: ''
     };
     this.onChange = this.onChange.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
   }
 
   onChange(e) {
     this.setState({ [e.target.name]: e.target.value });
   }
 
+  onSubmit(e) {
+    e.preventDefault();
+    this.props.signupRequest(this.state);
+  }
+
   render() {
     return (
-      <form>
+      <form onSubmit = {this.onSubmit}>
         <h1>Join us Today to enjoy all our features</h1>
 
         <div className="form-group">
@@ -28,6 +37,40 @@ class SignupForm extends Component {
             className="form-control"
           />
         </div>
+
+        <div className="form-group">
+          <label className="control-label">Email</label>
+          <input
+            value={this.state.email}
+            onChange={this.onChange}
+            type="email"
+            name="email"
+            className="form-control"
+          />
+        </div>
+
+        <div className="form-group">
+          <label className="control-label">Password</label>
+          <input
+            value={this.state.password}
+            onChange={this.onChange}
+            type="text"
+            name="password"
+            className="form-control"
+          />
+        </div>
+
+        <div className="form-group">
+          <label className="control-label">Confirm Password</label>
+          <input
+            value={this.state.passwordConfirmation}
+            onChange={this.onChange}
+            type="text"
+            name="passwordConfirmation"
+            className="form-control"
+          />
+        </div>
+
         <div className="form-group">
           <button className="btn btn-primary btn-lg">
             Signup
@@ -37,5 +80,9 @@ class SignupForm extends Component {
     );
   }
 }
+
+SignupForm.propTypes = {
+  signupRequest: React.propTypes.func.isRequired
+};
 
 export default SignupForm;

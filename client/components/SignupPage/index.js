@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import SignupForm from './SignupForm';
+import { signupRequest } from '../../actions/signupActions';
 
 class SignupPage extends Component {
   render() {
+    const { signupRequest } = this.props;
     return (
       <div>
         <div className="row">
           <div className="col-md-4 col-md-offset-4">
-            <SignupForm />
+            <SignupForm signupRequest={signupRequest}/>
           </div>
         </div>
       </div>
@@ -15,4 +18,8 @@ class SignupPage extends Component {
   }
 }
 
-export default SignupPage;
+SignupPage.propTypes = {
+  signupRequest: React.propTypes.func.isRequired
+};
+
+export default connect((state) => ({}), { signupRequest })(SignupPage);
