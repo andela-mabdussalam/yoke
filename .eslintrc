@@ -12,6 +12,20 @@
       "jsx": true
     }
   },
+    "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": {
+          "resolve": {
+            "extensions": [
+              ".js",
+              ".jsx"
+            ]
+          }
+        }
+      }
+    }
+  },
   "env": {
     "browser": true,
     "node": true,
