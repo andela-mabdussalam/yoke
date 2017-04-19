@@ -23,4 +23,4 @@ SignupPage.propTypes = {
   signupRequest: PropTypes.func.isRequired
 };
 
-export default connect((state) => ({}), { signupRequest })(SignupPage);
+export default connect(null, { signupRequest })(SignupPage);
