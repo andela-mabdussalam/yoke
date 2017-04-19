@@ -8,9 +8,9 @@ class SignupPage extends Component {
   render() {
     const { signupRequest } = this.props;
     return (
-      <div>
-        <div className="row">
-          <div className="col-md-4 col-md-offset-4">
+      <div className="container">
+        <div className="row" >
+          <div className="col-md-4" style={{ margin: '0 auto', marginTop: '7%' }}>
             <SignupForm signupRequest={signupRequest}/>
           </div>
         </div>
