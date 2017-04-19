@@ -12,7 +12,7 @@
       "jsx": true
     }
   },
-    "settings": {
+  "settings": {
     "import/resolver": {
       "webpack": {
         "config": {

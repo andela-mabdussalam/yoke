@@ -34,8 +34,8 @@ class SignupForm extends Component {
 
   onSubmit(e) {
     e.preventDefault();
-
-    if (true) {
+   // adress issue with client side validation
+    if (this.isValid) {
       this.setState({ errors: {}, isLoading: true });
       this.props.signupRequest(this.state).then(
         () => { },
