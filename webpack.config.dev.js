@@ -66,6 +66,7 @@ export default {
     ]
   },
   resolve: {
-    extensions: ['.js', '.jsx']
+    extensions: ['.js', '.jsx'],
+    root: path.resolve(__dirname, './client'),
   }
 };
