@@ -6,12 +6,12 @@ import { signupRequest } from '../../actions/signupActions';
 
 class SignupPage extends Component {
   render() {
-    const { signupRequest } = this.props;
+    const { signupReq } = this.props;
     return (
-      <div>
-        <div className="row">
-          <div className="col-md-4 col-md-offset-4">
-            <SignupForm signupRequest={signupRequest}/>
+      <div className="container">
+        <div className="row" >
+          <div className="col-md-4" style={{ margin: '0 auto', marginTop: '7%' }}>
+            <SignupForm signupRequest={signupReq}/>
           </div>
         </div>
       </div>
@@ -20,7 +20,7 @@ class SignupPage extends Component {
 }
 
 SignupPage.propTypes = {
-  signupRequest: PropTypes.func.isRequired
+  signupReq: PropTypes.func.isRequired
 };
 
 export default connect(null, { signupRequest })(SignupPage);

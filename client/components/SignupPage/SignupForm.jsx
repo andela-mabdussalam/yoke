@@ -34,11 +34,11 @@ class SignupForm extends Component {
 
   onSubmit(e) {
     e.preventDefault();
-
-    if (true) {
+   // adress issue with client side validation
+    if (this.isValid) {
       this.setState({ errors: {}, isLoading: true });
       this.props.signupRequest(this.state).then(
-        () => {},
+        () => { },
         err => this.setState({ errors: err.response.data, isLoading: false })
       );
     }
@@ -47,8 +47,7 @@ class SignupForm extends Component {
   render() {
     const { errors } = this.state;
     return (
-      <form onSubmit = {this.onSubmit}>
-        <h1>Join our community!</h1>
+      <form onSubmit={this.onSubmit}>
 
         <InputTemplate
           error={errors.username}
@@ -87,9 +86,7 @@ class SignupForm extends Component {
         />
 
         <div className="form-group">
-          <button disabled={this.state.isLoading} className="btn btn-primary btn-lg">
-            Signup
-          </button>
+          <button disabled={this.state.isLoading} className="btn btn-primary outline">Signup</button>
         </div>
       </form>
     );

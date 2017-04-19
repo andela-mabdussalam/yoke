@@ -29,6 +29,7 @@ export default {
         test: /\.jsx?$/,
         exclude: /node_modules/,
         loaders: ['babel-loader'],
+        include: __dirname
       },
       {
         test: /(\.css)$/,

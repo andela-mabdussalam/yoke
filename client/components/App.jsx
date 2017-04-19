@@ -5,8 +5,10 @@ import NavigationBar from './NavigationBar';
 class App extends React.Component {
   render() {
     return (
-      <div className="container">
-      <NavigationBar />
+      <div>
+        <div className="container">
+          <NavigationBar />
+        </div>
         {this.props.children}
       </div>
     );
