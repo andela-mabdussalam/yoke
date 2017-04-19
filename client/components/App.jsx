@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import NavigationBar from './NavigationBar';
+import NavigationBar from './NavigationBar.jsx';
 
 class App extends React.Component {
   render() {
