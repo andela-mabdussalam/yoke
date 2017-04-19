@@ -1,7 +1,20 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import NavigationBar from './NavigationBar';
 
-export default () => {
-  return (
-    <h1>Hello from react</h1>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <div className="container">
+      <NavigationBar />
+        {this.props.children}
+      </div>
+    );
+  }
 }
+
+App.propTypes = {
+  children: PropTypes.array.isRequired
+};
+
+export default App;

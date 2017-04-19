@@ -2,14 +2,15 @@ import path from 'path';
 import webpack from 'webpack';
 
 export default {
-  devtools: 'eval-source-map',
+  devtool: 'eval-source-map',
   entry: [
-    'webpack-hot-middleware/client',
-    path.join(__dirname, '/client/index.js')
+    'babel-polyfill',
+    'webpack-hot-middleware/client?reload=true',
+    path.join(__dirname, '/client/index')
   ],
   target: 'web',
   output: {
-    path: `${__dirname}/dist`, // Note: Physical files are only output by the production build task `npm run build`.
+    path: `${__dirname}/dist`,
     publicPath: '/',
     filename: 'bundle.js'
   },
@@ -18,7 +19,7 @@ export default {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.optimize.OcurenceOrderPlugin(),
+    new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin()
 
   ],
