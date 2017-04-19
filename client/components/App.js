@@ -14,7 +14,7 @@ class App extends React.Component {
 }
 
 App.propTypes = {
-  children: PropTypes.object.isRequired
+  children: PropTypes.array.isRequired
 };
 
 export default App;
