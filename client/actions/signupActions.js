@@ -1,5 +1,5 @@
 import axios from 'axios';
 
 export function signupRequest(userData) {
-  return dispatch => axios.post('/api/users', userData);
+  return dispatch => axios.post('/signup', userData);
 }

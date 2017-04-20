@@ -21,7 +21,6 @@ class Users {
 
       newUser.save((err, user) => {
         if (err) throw err;
-        console.log('User Successfully created!');
         return res.status(201).json({ user });
       });
     }
