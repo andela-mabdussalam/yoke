@@ -10,13 +10,13 @@ export default () => (
       aria-label="Toggle navigation">
       <span className="navbar-toggler-icon" />
     </button>
-    <Link to="/"><a className="navbar-brand" href="#">YOKE</a></Link>
+    <Link to="/"><span className="navbar-brand" href="#">YOKE</span></Link>
 
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav mr-auto">
         <li className="nav-item active">
-          <Link to="/"><a className="nav-link" href="#">Home
-               <span className="sr-only">(current)</span></a></Link>
+          <Link to="/"><span className="nav-link" href="#">Home
+               <span className="sr-only">(current)</span></span></Link>
         </li>
       </ul>
       <ul className="nav navbar-nav navbar-right">

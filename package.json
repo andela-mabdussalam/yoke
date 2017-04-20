@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon --watch server --exec babel-node -- server/index",
+    "db": "babel-node server/populate",
     "test": "echo \"Error: no test specified\" && exit 0"
   },
   "repository": {
@@ -42,6 +43,7 @@
     "axios": "^0.16.1",
     "babel-eslint": "^7.2.2",
     "babel-polyfill": "^6.23.0",
+    "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.17.1",
     "classnames": "^2.2.5",
     "express": "^4.15.2",
@@ -50,6 +52,9 @@
     "jquery": "^3.2.1",
     "lodash": "^4.17.4",
     "material-icons": "^0.1.0",
+    "mongoose": "^4.9.5",
+    "morgan": "^1.8.1",
+    "path": "^0.12.7",
     "prop-types": "^15.5.8",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
