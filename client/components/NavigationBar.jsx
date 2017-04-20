@@ -10,21 +10,32 @@ export default () => (
       aria-label="Toggle navigation">
       <span className="navbar-toggler-icon" />
     </button>
-    <Link to="/"><a className="navbar-brand" href="#">YOKE</a></Link>
+    <Link to="/">
+      <span className="navbar-brand" href="#">YOKE</span>
+    </Link>
 
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav mr-auto">
         <li className="nav-item active">
-          <Link to="/"><a className="nav-link" href="#">Home
-               <span className="sr-only">(current)</span></a></Link>
+          <Link to="/">
+            <span className="nav-link" href="#">Home
+              <span className="sr-only">(current)</span>
+            </span>
+          </Link>
         </li>
       </ul>
       <ul className="nav navbar-nav navbar-right">
-        <li className="extra"><Link to="/signup">
-          <i className="fa fa-user-o icon" aria-hidden="true" />
-          Sign Up</Link></li>
-        <li><a href="#"><i className="fa fa-sign-in icon"
-          aria-hidden="true"/>Login</a></li>
+        <li className="extra">
+          <Link to="/signup">
+            <i className="fa fa-user-o icon" aria-hidden="true" />
+            Sign Up
+          </Link>
+        </li>
+        <li>
+          <span href="#"><i className="fa fa-sign-in icon"
+            aria-hidden="true"/>Login
+          </span>
+        </li>
       </ul>
     </div>
   </nav>
